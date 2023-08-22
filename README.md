@@ -61,7 +61,7 @@ The files inside the base directory enable a docker container to be built and th
 
 #### Building and/or opening the container in vscode
 - In terminal, open the base folder containing the dingo quadruped code: `cd ~/any_folder_name/DingoQuadruped`
-- run `. code` to open the dingo quadruped base folder in vscode
+- run `code .` to open the dingo quadruped base folder in vscode
 - A prompt will appear saying either to build the container or run it, click "build" or "run"
 - Wait for the container to be built and initialised
 - (First time only) Once the container is built, Check that "ROS1.noetic" appears in the bottom left to indicate that the ros extension has correctly detected the ros version inside the container. If it does not appear, follow [these steps](https://youtu.be/JbBMF1aot5k?t=356)
