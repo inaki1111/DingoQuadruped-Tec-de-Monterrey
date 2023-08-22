@@ -49,7 +49,7 @@ The following flow diagram shows a simplified overview of how a joystick command
 - Fetch dependencies with rosdep: `rosdep update`
 - Build the workspace: `catkin build`
 - Source the workspace: `source devel/setup.bash`
-- (Optional) Add a line to .bashrc to automatically source the workspace: `echo "source ~/any_folder_name/DingoQuadruped/dingo_ws/devel/setup.bash" >> ~/.bashrc`, `source ~/.bashrc`
+- (Optional) Add a line to .bashrc to automatically source the workspace: `echo "source ~/DingoQuadruped-Tec-de-Monterrey/dingo_ws/devel/setup.bash" >> ~/.bashrc`, `source ~/.bashrc`
 
 ### Docker Container
 The files inside the base directory enable a docker container to be built and the code to inspected and debugged in visual studio code. This is mostly for debugging purposes, and is best for an external device debugging or adding to the code, rather than being used on the quadruped itself. Note: These instructions assume a linux OS.
