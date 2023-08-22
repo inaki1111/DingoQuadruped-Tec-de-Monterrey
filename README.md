@@ -67,6 +67,9 @@ The files inside the base directory enable a docker container to be built and th
 - (First time only) Once the container is built, Check that "ROS1.noetic" appears in the bottom left to indicate that the ros extension has correctly detected the ros version inside the container. If it does not appear, follow [these steps](https://youtu.be/JbBMF1aot5k?t=356)
 
 ## Running the code
+
+Please install this dependency to ensure that the comunication between dingo.launch and dingo gazebo work correctly. `sudo apt-get install ros-noeticros-control ros-noetic-ros-controllers`
+
 ### Dingo_Driver
 The Dingo_Driver should be started before any other code is launched on the Dingo. It starts joystick control of the robot and allows joint and task space commands to be received from other code or controllers via command ROS topics, as long as joystick control is disabled. If enabled, joystick control will override any commands sent through the command topics. To launch it, run the following line:
 `roslaunch dingo dingo.launch`
