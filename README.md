@@ -87,6 +87,8 @@ With no arguments specified, it will assume a joystick controller is used for co
 As an example of how the arguments can be used, if the code is to be run purely in simulation with joystick control, you would launch the driver with the following arguments: 
 `roslaunch dingo dingo.launch is_physical:=0 is_sim:=1`
 
+Please install this dependency to ensure that the comunication between dingo.launch and dingo gazebo work correctly. `sudo apt-get install ros-noeticros-control ros-noetic-ros-controllers`
+
 ### Launching the gazebo simulation
 Make sure dingo_driver is running first, then:
 `roslaunch dingo_gazebo simulation.launch`
