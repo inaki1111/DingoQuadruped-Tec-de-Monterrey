@@ -9,6 +9,7 @@ class HardwareInterface():
         self.pwm_max = 2400
         self.pwm_min = 370
         self.link = link
+        self.servo_params = 0
         self.servo_angles = np.zeros((3,4))
         self.kit = ServoKit(channels=16) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
         
@@ -80,8 +81,8 @@ class HardwareInterface():
                     rospy.logwarn("Warning - I2C IO error")
 
     ##  THis method is used only in the calibrate servos file will make something similar to command individual actuators. 
-    # def set_actuator_position(self, joint_angle, axis, leg):
-    #     send_servo_command(self.pi, self.pwm_params, self.servo_params, joint_angle, axis, leg)
+    def set_actuator_position(self, joint_angle, axis, leg):
+        send_servo_command(self.pi, self.pwm_params, self.servo_params, joint_angle, axis, leg)
     def relax_all_motors(self,servo_list = np.ones((3,4))):
         """Relaxes desired servos so that they appear to be turned off. 
 
