@@ -1,7 +1,7 @@
 #include <ros.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Float32.h>
-#include <dingo_nano_interfacing/ElectricalMeasurements.h>
+#include "dingo_nano_interfacing/ElectricalMeasurements.h"  // Adjust this if the directory name is different
 #include <std_msgs/String.h>  // Use simple string messages for GPS data
 #include <avr/sleep.h>
 #include <SoftwareSerial.h>
@@ -13,11 +13,11 @@ int index = 0;  // Index for gpsData array
 ros::NodeHandle_<ArduinoHardware, 5, 5, 128, 256> arduino_nano_node;
 
 std_msgs::Bool emergency_stop_msg;
-dingo_nano_interfacing::ElectricalMeasurements electrical_measurement_msg;
+dingo_peripheral_interfacing::ElectricalMeasurements electrical_measurement_msg; // Corrected namespace
 std_msgs::String gps_msg;  // ROS message for GPS data
 
 ros::Publisher emergency_stop_status_publisher("emergency_stop_status", &emergency_stop_msg);
-ros::Publisher electrical_measurement_publisher("electrical_measurements", &electrical_measurement_msg);
+ros::Publisher electrical_measurement_publisher("electrical_measurements", &electrical_measurement_msg);  // Correctly referencing the object
 ros::Publisher gps_publisher("gps_data", &gps_msg);
 
 void setup() {
